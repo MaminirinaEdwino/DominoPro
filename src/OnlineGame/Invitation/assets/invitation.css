@@ -1,0 +1,23 @@
+@tailwind base;
+
+@tailwind components;
+@tailwind utilities;
+
+.invitationRecu{
+    @apply border border-blue-500 p-2 rounded-md w-fit min-w-80 max-w-80 bg-white animate-fade-right
+}
+.invitationRecu .add, .invitationRecu .suppr, .btninvitation{
+    @apply p-1 rounded-md mt-2 ml-2 min-w-24
+}
+.invitationRecu .add, .btninvitation{
+    @apply bg-blue-500 text-white
+}
+.invitationRecu .suppr{
+    @apply bg-red-500 text-white
+}
+.invitation{
+    @apply border border-blue-500 p-2 rounded-md w-fit min-w-80 grid grid-cols-2 bg-white m-2 animate-fade-right
+}
+.choixInvitation button{
+    @apply p-2 rounded-md bg-blue-600 text-white active:animate-jump duration-500 ease-out
+}

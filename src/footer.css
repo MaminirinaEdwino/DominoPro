@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.footer{
+    @apply w-full flex justify-between fixed bottom-0 border h-10 pt-2 ;
+}
+
+.footer .contact {
+    @apply flex w-fit justify-between content-center;
+}
+.facebook{
+    @apply relative ml-4
+}

@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.FormConnexion{
+    @apply p-3 border border-blue-500 rounded-md mt-20 w-fit animate-fade-right shadow-2xl;
+}
+.FormConnexion button{
+    @apply bg-blue-500 rounded-md h-10 w-32 text-white font-semibold animate-fade-right
+}
+.FormulaireInscription{
+    @apply p-3 border border-blue-500 rounded-md mt-10 w-fit animate-fade-right shadow-2xl;
+}
+.FormulaireInscription button {
+    @apply bg-blue-500 rounded-md h-10 w-32 text-white font-semibold animate-fade-right
+}

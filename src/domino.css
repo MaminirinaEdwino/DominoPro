@@ -1,0 +1,33 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+.domino {
+    @apply  grid grid-flow-row grid-rows-2 shadow-xl;
+}
+.anatymain{
+    @apply hover:animate-fade w-10 h-20
+}
+.midaboka {
+    @apply rotate-90 lg:ml-10 lg:w-10 lg:h-20 xs:w-5 xs:h-10 xs:ml-5;
+}
+
+.mitsangana {
+    @apply lg:ml-5 lg:w-10 lg:h-20 xs:w-5 xs:h-10 xs:ml-2 xs:-mr-2;
+}
+.mitsangana .six, 
+.mitsangana .cinq,
+.mitsangana .quatre,
+.mitsangana .trois,
+.mitsangana .deux,
+.mitsangana .un,
+.midaboka .six, 
+.midaboka .cinq,
+.midaboka .quatre,
+.midaboka .trois,
+.midaboka .deux,
+.midaboka .un{
+    @apply xs:p-1 xs:gap-0.5
+}

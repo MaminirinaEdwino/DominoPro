@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.affichageDesDiscu{
+    @apply border border-blue-500 p-2 mb-2 rounded-md animate-fade-right
+}
+.affichageDesDiscu button{
+    @apply text-xs
+}
+.affichageDesDiscu span{
+    @apply font-bold
+}
+.interfaceMessagerie{
+    @apply border border-blue-500 rounded-md pl-2 pr-2 pt-2  shadow-2xl w-80 max-h-96 overflow-y-scroll scroll-smooth
+}
+.discu{
+    @apply border border-blue-500 p-2 mb-2 rounded-md fixed bg-white left-80 top-40 animate-fade-right shadow-lg
+}
+.message{
+    @apply p-1 border border-blue-500 rounded-md mb-1 w-fit
+}
+.gauche{
+    @apply bg-white
+}
+.droite{
+    @apply bg-blue-500 self-end
+}
+.Boite_message{
+    @apply flex flex-col overflow-y-scroll h-52 
+}
+.messageInput{
+    @apply border shadow-lg p-1 rounded-md border-blue-400
+}
+.envoye{
+    @apply rotate-45 w-7 ml-4 text-lg
+}
+.btnMulti{
+    @apply text-blue-500 text-2xl
+}

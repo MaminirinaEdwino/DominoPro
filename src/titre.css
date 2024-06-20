@@ -1,0 +1,36 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+.titre{
+    @apply font-bold mt-4 relative top-4 text-blue-500;
+}
+.logo{
+    @apply border w-16 h-32 absolute left-96 rotate-45 rounded-md p-1 gap-1 flex flex-col border-blue-500;
+}
+.logo .case{
+    @apply w-full h-14 border border-blue-500 rounded-md grid grid-cols-3 p-2 gap-2;
+}
+.int1, .int4 , .int7, .int3, .int6, .int9{
+    @apply border border-blue-500 bg-blue-500 w-2 h-2 rounded-lg;
+}
+
+.logo1{
+    @apply  border-2 w-40 h-80 fixed -right-20 rotate-45 rounded-lg p-2 gap-3 flex flex-col border-blue-500;
+}
+.logo1 .case {
+    @apply w-full h-36 border border-blue-500 rounded-md grid grid-cols-3 p-2 gap-2;
+}
+.logo1 .case .int1,
+.logo1 .case .int4,
+.logo1 .case .int7,
+.logo1 .case .int3,
+.logo1 .case .int6,
+.logo1 .case .int9 {
+    @apply border border-blue-500 bg-blue-500 w-9 h-9 rounded-2xl;
+}
+.logo, .logo1{
+    @apply xs:hidden
+}

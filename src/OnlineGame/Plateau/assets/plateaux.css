@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.tableDejeu{
+    @apply border border-black min-h-80 max-h-80 h-80 flex justify-center content-center items-center
+}

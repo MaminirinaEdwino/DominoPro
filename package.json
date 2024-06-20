@@ -1,0 +1,44 @@
+{
+  "name": "DominoPRO",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview",
+    "app": "npx tailwind build src/App.css -o src/assets/App.css",
+    "domino": "npx tailwind build src/domino.css -o src/assets/domino.css",
+    "valeur": "npx tailwind build src/valeur.css -o src/assets/valeur.css",
+    "mains": "npx tailwind build src/mainJoueur.css -o src/assets/mainJoueur.css",
+    "titre": "npx tailwind build src/titre.css -o src/assets/titre.css",
+    "acc": "npx tailwind build src/acceuil.css -o src/assets/acceuil.css",
+    "mode": "npx tailwind build src/choixmode.css -o src/assets/choixmode.css",
+    "footer": "npx tailwind build src/footer.css -o src/assets/footer.css",
+    "menu": "npx tailwind build src/menu.css -o src/assets/menu.css",
+    "point": "npx tailwind build src/point.css -o src/assets/point.css",
+    "listetable": "npx tailwind build src/OnlineGame/ListesTableDisponible/assets/listetable.css -o src/OnlineGame/ListesTableDisponible/assets/dists/listetable.css",
+    "invitation": "npx tailwind build src/OnlineGame/Invitation/assets/invitation.css -o src/OnlineGame/Invitation/assets/dists/invitaion.css"
+  },
+  "dependencies": {
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "font-awesome": "^4.7.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.23.0",
+    "tailwindcss": "^3.4.3",
+    "vite-plugin-pwa": "^0.20.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.66",
+    "@types/react-dom": "^18.2.22",
+    "@vitejs/plugin-react": "^4.2.1",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react": "^7.34.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.6",
+    "tailwindcss-animated": "^1.0.1",
+    "vite": "^5.2.0"
+  }
+}

@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.inscriptionConnexionChoix{
+    @apply text-blue-500 text-sm absolute top-80 left-1/2 ml-16 mt-8 animate-fade-right
+}
+.inscriptionConnexionChoixConnex{
+    @apply text-blue-500 text-sm absolute top-80 left-1/2 ml-16 mt-16 animate-fade-right
+}

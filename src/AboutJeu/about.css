@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind utilities;
+@tailwind components;
+
+.about{
+    @apply flex flex-col justify-center items-center content-center h-screen
+}
+.about button{
+    @apply text-sm text-blue-400
+}
+.titreAPropos{
+    @apply text-blue-500 font-bold
+}
+.grand{
+    @apply text-6xl
+}
+.petit{
+    @apply text-xl
+}
+.information{
+    @apply text-center p-2 animate-fade
+}
+.lien{
+    @apply text-blue-500 font-semibold
+}

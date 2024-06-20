@@ -1,0 +1,44 @@
+.point {
+  position: relative;
+  left: 18rem;
+  top: -2rem;
+  display: grid;
+  width: -moz-fit-content;
+  width: fit-content;
+  gap: 0.5rem;
+  border-radius: 0.375rem;
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(59 130 246 / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  padding: 0.25rem;
+  text-align: center
+}
+
+@media (min-width: 320px) {
+  .point {
+    left: 0px;
+    top: 1.25rem
+  }
+}
+
+.J2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr))
+}
+
+.J3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr))
+}
+
+.J4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr))
+}
+
+.nomjoueur {
+  width: 5rem;
+  border-radius: 0.125rem;
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(59 130 246 / var(--tw-border-opacity))
+}

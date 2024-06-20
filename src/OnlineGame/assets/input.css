@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+input{
+    @apply w-72 bg-white h-9 shadow-xl rounded-md border  animate-fade-right 
+}
+label{
+    @apply text-lg text-blue-500 font-semibold 
+}
+.inputFormulaire{
+    @apply p-3 mb-4
+}

@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.menu button{
+    @apply absolute  right-2 ;
+}
+.menu .lien{
+    @apply w-32 h-auto absolute right-14 top-10 border-2 shadow-xl border-blue-500 bg-white rounded-md p-2
+    z-10 xs:right-1 xs:top-14;
+}

@@ -1,0 +1,48 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+.un,
+.deux,
+.trois,
+.quatre,
+.cinq,
+.six,
+.zero {
+    @apply border border-blue-500 grid grid-cols-3 gap-1 p-1 shadow-xl;
+}
+
+.un .case5,
+.deux .case1,
+.deux .case9,
+.six .case1,
+.six .case3,
+.six .case4,
+.six .case6,
+.six .case7,
+.six .case9 {
+    @apply rounded-full bg-black border border-black;
+}
+
+.trois .case1,
+.trois .case5,
+.trois .case9 {
+    @apply rounded-full bg-black border border-black;
+}
+
+.quatre .case1,
+.quatre .case3,
+.quatre .case7,
+.quatre .case9 {
+    @apply rounded-full bg-black border border-black;
+}
+
+.cinq .case1,
+.cinq .case3,
+.cinq .case5,
+.cinq .case7,
+.cinq .case9 {
+    @apply rounded-full bg-black border border-black;
+}

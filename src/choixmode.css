@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.choixmode{
+    @apply 
+    flex 
+    flex-col 
+    content-center 
+    justify-around 
+    items-center
+    border
+    rounded-md
+    w-80
+    h-72
+    mt-16
+    animate-fade-left
+    shadow-xl
+    p-4;
+}
+.btnChoix{
+    @apply border
+    border-blue-600
+    shadow-lg
+    text-blue-600
+    animate-fade-right
+    w-64
+    h-10
+    text-lg
+    pt-1
+    text-center
+    rounded-md
+    hover:bg-blue-600
+    hover:text-white
+    hover:animate-pulse
+    hover:duration-500
+    ;
+}

@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind utilities;
+@tailwind components;
+
+.boiteChargemnent{
+    @apply w-screen h-screen flex flex-col justify-center content-center items-center
+}
+.titre{
+    @apply text-4xl mb-10
+}
+.titreChargement{
+    @apply text-blue-500 text-sm 
+}
+.pourcentageChargement{
+    @apply text-white bg-blue-500 text-center text-xs
+}

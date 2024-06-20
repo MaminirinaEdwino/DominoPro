@@ -1,0 +1,19 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+.acceuil{
+    @apply 
+    flex 
+    bg-white
+    content-center 
+    flex-col 
+    items-center
+    h-screen
+    w-full
+    xs:h-screen
+    xs:-mb-10
+    ;
+}

@@ -1,0 +1,68 @@
+.main {
+  position: absolute;
+  top: 2.5rem;
+  right: 0px;
+  display: flex;
+  flex-direction: row;
+  align-content: space-between;
+  gap: 0.25rem
+}
+
+.mainAdversaire {
+  position: absolute;
+  bottom: 6rem;
+  left: 0px;
+  z-index: 0;
+  display: flex;
+  gap: 1rem
+}
+
+@media (min-width: 320px) {
+  .mainAdversaire {
+    bottom: 2.5rem;
+    width: 100%;
+    align-content: space-between
+  }
+}
+
+.mainAdversaire .mainJ {
+  gap: 0.25rem
+}
+
+@media (min-width: 320px) {
+  .mainAdversaire .mainJ {
+    display: none
+  }
+}
+
+@media (min-width: 1024px) {
+  .mainAdversaire .mainJ {
+    display: flex
+  }
+}
+
+.dominovide {
+  border-radius: 0.375rem;
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(59 130 246 / var(--tw-border-opacity));
+  --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  transition-duration: 1000ms
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0
+  }
+
+  100% {
+    opacity: 1
+  }
+}
+
+.dominovide:hover {
+  animation: fade 1s both
+}
+

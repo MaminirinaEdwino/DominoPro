@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.listetable{
+    @apply border border-blue-400 max-w-80 rounded-md animate-fade-right
+}
+.tableinfo{
+    @apply min-h-14 m-2 border border-blue-600 p-2 rounded-md
+}
+.tittreTable{
+    @apply font-bold
+}
+.btnJoin{
+    @apply bg-blue-600 p-1 rounded-md text-white
+}
+.texteDeco{
+    @apply text-xs
+}
+.animation{
+    @apply border-t-4 rounded-full border-blue-500 animate-spin w-4 h-4
+}
+.btnMutli {
+    @apply text-blue-700 text-4xl border-red-500
+}
