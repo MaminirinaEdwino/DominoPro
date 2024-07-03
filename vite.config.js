@@ -33,11 +33,12 @@ export default defineConfig({
 						}
 					}
 				}],
-				globPatterns: ["**/*"]    
+				globPatterns: ["**/*"]
 			}
 		})
 	],
 	server: {
 		host: true
-	}
+	},
+	base: "/DominoPro/"
 })

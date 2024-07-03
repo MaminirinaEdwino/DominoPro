@@ -3,6 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
+  "homepage": "https://MaminirinaEdwino.github.io/DominoPro",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -19,7 +20,8 @@
     "menu": "npx tailwind build src/menu.css -o src/assets/menu.css",
     "point": "npx tailwind build src/point.css -o src/assets/point.css",
     "listetable": "npx tailwind build src/OnlineGame/ListesTableDisponible/assets/listetable.css -o src/OnlineGame/ListesTableDisponible/assets/dists/listetable.css",
-    "invitation": "npx tailwind build src/OnlineGame/Invitation/assets/invitation.css -o src/OnlineGame/Invitation/assets/dists/invitaion.css"
+    "invitation": "npx tailwind build src/OnlineGame/Invitation/assets/invitation.css -o src/OnlineGame/Invitation/assets/dists/invitaion.css",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@fortawesome/react-fontawesome": "^0.2.0",
@@ -39,6 +41,7 @@
     "eslint-plugin-react": "^7.34.1",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.6",
+    "gh-pages": "^6.1.1",
     "react-icons": "^5.2.1",
     "tailwindcss-animated": "^1.0.1",
     "vite": "^5.2.0"
