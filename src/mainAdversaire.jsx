@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import './assets/mainJoueur.css'
 import { GenererNombreAleatoire } from './fichierJs/fonction'
 export function MainAdversaire({ nombreJoueur, nomJ2, mainJ2, nomJ3, mainJ3, nomJ4, mainJ4, tourDeJoueur }) {
@@ -13,7 +14,7 @@ export function MainAdversaire({ nombreJoueur, nomJ2, mainJ2, nomJ3, mainJ3, nom
         }
         return (
             <>
-                {mains.map(Element => (<div key={'teste' + GenererNombreAleatoire(120, 0) + 'teste' + GenererNombreAleatoire(120, 0)}>{Element}</div>))}
+                {mains.map(Element => (<div key={'teste' + GenererNombreAleatoire(120, 0) + 'teste' + GenererNombreAleatoire(1000, 0)}>{Element}</div>))}
             </>
         )
     }

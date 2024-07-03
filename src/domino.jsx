@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/prop-types */
 import { Valeur } from "./valeur"
 import './assets/domino.css'
 export function Domino({ valeur1, valeur2, onClick, cle, emplacement }) {
@@ -9,10 +11,10 @@ export function Domino({ valeur1, valeur2, onClick, cle, emplacement }) {
         className = "domino logo"
     }
     if (emplacement == 2  && valeur1 != valeur2) {
-        className = "domino midaboka"
+        className = "domino midaboka placer"
     }
     if (emplacement == 2 && valeur1 == valeur2) {
-        className = "domino mitsangana"
+        className = "domino mitsangana placer"
     }
     return <>
         <div className={className} onClick={(e)=>onClick(cle)}>

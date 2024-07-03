@@ -554,6 +554,45 @@ video {
   --tw-contain-style:  ;
 }
 
+#div1, #div2,#div3,#div4, #div5 {
+  position: relative;
+  display: flex;
+  width: -moz-fit-content;
+  width: fit-content;
+  align-items: center;
+}
+
+#div2 {
+  left: 94%;
+  top: -6%;
+  --tw-rotate: 90deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  justify-content: center;
+  background-color: transparent;
+}
+
+#div3 {
+  left: 5%;
+  top: 5%;
+  width: 100%;
+  --tw-rotate: 180deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  justify-content: flex-start;
+  background-color: transparent;
+}
+
+#div4 {
+  --tw-rotate: -90deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  --tw-bg-opacity: 1;
+  background-color: rgb(71 85 105 / var(--tw-bg-opacity));
+}
+
+#div5 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(34 197 94 / var(--tw-bg-opacity));
+}
+
 .tableDeJeu {
   position: absolute;
   top: 5rem;
@@ -576,7 +615,23 @@ video {
   border-color: rgb(59 130 246 / var(--tw-border-opacity));
 }
 
-.avant, .apres {
+#tablesInterne {
+  display: grid;
+  display: none;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+}
+
+.tables {
+  display: grid;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+}
+
+.avant,
+.apres {
   position: relative;
   display: flex;
   align-content: center;
@@ -595,12 +650,14 @@ video {
   }
 }
 
-.avant:hover, .apres:hover {
+.avant:hover,
+.apres:hover {
   animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
 }
 
 @media (min-width: 320px) {
-  .avant, .apres {
+  .avant,
+.apres {
     top: 0.625rem;
     height: 1.25rem;
     width: 1.25rem;
@@ -608,7 +665,8 @@ video {
 }
 
 @media (min-width: 1024px) {
-  .avant, .apres {
+  .avant,
+.apres {
     top: 1.25rem;
     height: 2.5rem;
     width: 2.5rem;
@@ -617,6 +675,17 @@ video {
 
 .apres {
   left: 1.25rem;
+}
+
+.apres2 {
+  position: relative;
+  left: 95%;
+}
+
+.apres3 {
+  position: relative;
+  top: -2.5rem;
+  left: auto;
 }
 
 html, body {
@@ -702,7 +771,9 @@ html, body {
   animation: fade 1s both;
 }
 
-.nombreJoueurSelect select, .difficulteSelect select, .parametreJeu input {
+.nombreJoueurSelect select,
+.difficulteSelect select,
+.parametreJeu input {
   height: 2rem;
   width: 100%;
   border-radius: 0.375rem;
@@ -714,12 +785,16 @@ html, body {
   transition-duration: 300ms;
 }
 
-.nombreJoueurSelect select:hover, .difficulteSelect select:hover, .parametreJeu input:hover {
+.nombreJoueurSelect select:hover,
+.difficulteSelect select:hover,
+.parametreJeu input:hover {
   --tw-border-opacity: 1;
   border-color: rgb(29 78 216 / var(--tw-border-opacity));
 }
 
-.nombreJoueurSelect select:focus, .difficulteSelect select:focus, .parametreJeu input:focus {
+.nombreJoueurSelect select:focus,
+.difficulteSelect select:focus,
+.parametreJeu input:focus {
   --tw-border-opacity: 1;
   border-color: rgb(59 130 246 / var(--tw-border-opacity));
 }

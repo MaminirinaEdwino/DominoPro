@@ -4,10 +4,34 @@
 
 @tailwind utilities;
 
+
+#div1, #div2,#div3,#div4, #div5{
+  @apply flex  items-center w-fit relative
+}
+
+#div2{
+  @apply rotate-90 bg-transparent left-[94%] -top-[6%] justify-center;
+
+}
+#div3{
+  @apply rotate-180 bg-transparent left-[5%] top-[5%] justify-start  w-full;
+
+}
+#div4{
+  @apply -rotate-90 bg-slate-600 
+}
+#div5{
+  @apply bg-green-500
+}
 .tableDeJeu {
   @apply w-full flex flex-row flex-wrap duration-500 h-80 border absolute top-20 justify-center content-center shadow-inner hover:border-blue-500;
 }
-
+#tablesInterne{
+  @apply grid grid-cols-8 hidden
+}
+.tables {
+  @apply grid w-fit grid-cols-8 h-fit
+}
 .avant,
 .apres {
   @apply lg:w-10 lg:h-10 border border-blue-300 relative lg:top-5 xs:top-2.5 rounded-md flex content-center justify-center items-center hover:animate-ping xs:w-5 xs:h-5;
@@ -16,7 +40,12 @@
 .apres {
   @apply left-5
 }
-
+.apres2{
+  @apply relative left-[95%]
+}
+.apres3{
+  @apply relative -top-10 left-auto
+}
 html, body {
   @apply w-full h-full;
 }

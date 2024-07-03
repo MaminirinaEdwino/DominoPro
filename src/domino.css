@@ -5,17 +5,20 @@
 @tailwind utilities;
 
 .domino {
-    @apply  grid grid-flow-row grid-rows-2 shadow-xl;
+    @apply  grid grid-flow-row grid-rows-2 shadow-xl relative;
 }
+
 .anatymain{
     @apply hover:animate-fade w-10 h-20
 }
 .midaboka {
     @apply rotate-90 lg:ml-10 lg:w-10 lg:h-20 xs:w-5 xs:h-10 xs:ml-5;
 }
-
+.midaboka2 {
+    @apply ml-10 -rotate-90
+}
 .mitsangana {
-    @apply lg:ml-5 lg:w-10 lg:h-20 xs:w-5 xs:h-10 xs:ml-2 xs:-mr-2;
+    @apply lg:ml-5 lg:w-10 lg:h-20 xs:w-5 xs:h-10 xs:ml-2 xs:-mr-2 ;
 }
 .mitsangana .six, 
 .mitsangana .cinq,

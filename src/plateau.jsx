@@ -1,8 +1,9 @@
+/* eslint-disable no-unused-vars */
 import { useEffect, useMemo, useReducer, useState } from 'react'
 import './assets/App.css'
 import { Domino } from './domino'
 import './assets/mainJoueur.css'
-import { TrouverChoix } from './fichierJs/fonction'
+import { TrouverChoix, distribuerDivEmplacement, placementDomino } from './fichierJs/fonction'
 import { triageEnOrdre } from './fichierJs/fonction'
 import { distributionJoueur } from './fichierJs/fonction'
 import { retourFin, retouDebut } from './fichierJs/fonction'
@@ -15,6 +16,7 @@ import { compterPoint } from './fichierJs/fonction'
 import { Spinner } from './spinner'
 import { RechercheDomino } from './fichierJs/algo'
 import { Chargement } from './chargement'
+import Apres from './addApres'
 
 function Plateau() {
     const Dominos = [
@@ -470,6 +472,9 @@ function Plateau() {
         //console.log(passerTour)
         console.log("tour", tour)
         console.log("liste Joueur", listeJoueur[tour])
+        placementDomino()
+        distribuerDivEmplacement(gagnant.avoirGagnant, dominoPlace)
+        ajouterClickFin()
         if (nombreJoueur == 2 && lancer == true) {
             if (tour == Joueur2.id) {
                 setTimeout(() => {
@@ -670,7 +675,10 @@ function Plateau() {
         setMainJoueur3([])
         setMainJoueur4([])
         setPasseTous(false)
-
+        document.getElementById('div1').innerHTML = ''
+        document.getElementById('div2').innerHTML = ''
+        document.getElementById('div3').innerHTML = ''
+        document.getElementById('div4').innerHTML = ''
         console.log(mainJoueur1)
         console.log(mainJoueur2)
         console.log(mainJoueur3)
@@ -731,13 +739,13 @@ function Plateau() {
         handlerPartie()
     }
     //fonction tsy miasa avy ito fa mety ho hilaina ihany
-    const miala = () => {
-        setMain1(mainJoueur1.length)
-        var teste = mainJoueur1
-        teste.pop()
-        setMainJoueur1(teste)
-        console.log(mainJoueur1.length)
-    }
+    // const miala = () => {
+    //     setMain1(mainJoueur1.length)
+    //     var teste = mainJoueur1
+    //     teste.pop()
+    //     setMainJoueur1(teste)
+    //     console.log(mainJoueur1.length)
+    // }
 
     //fonction ampiasaina analana ilay domino vao avy napetraka ambony table 
     const retirerDominoDeposer = (cle) => {
@@ -1033,9 +1041,7 @@ function Plateau() {
             setAffichePoint('none')
         }
     }
-    const foncTeste = () => {
-        console.log('teste micro')
-    }
+
     const [lancer, setLancer] = useState(false)
     const handleLancer = () => {
         if (nombreJoueur > 0) {
@@ -1054,17 +1060,19 @@ function Plateau() {
             setParametre('none')
         }
     }
-    const [tempsChargement, setTempsChargement] = useReducer(x=>x+1, 0)
+    const [tempsChargement, setTempsChargement] = useReducer(x => x + 1, 0)
     useEffect(() => {
-      
+
         setTimeout(() => {
             setTempsChargement()
         }, 50);
     }, [tempsChargement])
-    
+    const ajouterClickFin = ()=>{
+        
+    } 
     if (tempsChargement < 101) {
         return <>
-            <Chargement temps={tempsChargement}/>
+            <Chargement temps={tempsChargement} />
         </>
 
     } else {
@@ -1079,21 +1087,42 @@ function Plateau() {
                         cle={Element.cle} onClick={setTeste} emplacement={1} />))}</div>
                 </div>
 
-                        {/**ito ny mampiseho ilay table de jeu */}
+                {/**ito ny mampiseho ilay table de jeu */}
                 <div className='tableDeJeu' >
                     {!gagnant.avoirGagnant && <div className="avant" onClick={poserDominoAv}>{tour != 0 ? <Spinner /> : <i className='fas fa-arrow-left'></i>}</div>}
-                    {
-                        dominoPlace.map(Element => (<Domino
-                            valeur1={Element.v1}
-                            key={Element.cle}
-                            valeur2={Element.v2}
-                            cle={Element.cle}
-                            onClick={setTeste}
-                            emplacement={2}
-                        />))
+                    <div id="tablesInterne">
 
-                    }
-                    {!gagnant.avoirGagnant && <div className="apres" onClick={poserDominoAp}> {tour != 0 ? <Spinner /> : <i className='fas fa-arrow-right'></i>} </div>}
+                        {
+                            dominoPlace.map(Element => (<Domino
+                                valeur1={Element.v1}
+                                key={Element.cle}
+                                valeur2={Element.v2}
+                                cle={Element.cle}
+                                onClick={setTeste}
+                                emplacement={2}
+                            />))
+
+                        }
+
+                    </div>
+                    <div className="boite1">
+                        
+                        <div id="div1"> </div>
+                        <div id="div2"> </div>
+                        <div id="div3"> </div>
+                        {!gagnant.avoirGagnant && dominoPlace.length >= 12 && dominoPlace.length< 14 && <div style={{rotate : '90deg'}} className="apres apres2" onClick={poserDominoAp}> {tour != 0 ? <Spinner /> : <i className='fas fa-arrow-right'></i>} </div>}
+                        {!gagnant.avoirGagnant && dominoPlace.length>=14 && dominoPlace.length< 26 && <div style={{rotate: '180deg'}} className="apres apres3" onClick={poserDominoAp}> {tour != 0 ? <Spinner /> : <i className='fas fa-arrow-right'></i>} </div>}
+                    </div>
+
+                    <div className="boite2">
+                        <div id="div4"> </div>
+                    </div>
+                    <div className="boite3">
+                        <div id="div5"> </div>
+                    </div>
+
+
+                    {!gagnant.avoirGagnant && dominoPlace.length>=0 && dominoPlace.length <12 && <div className="apres" onClick={poserDominoAp}> {tour != 0 ? <Spinner /> : <i className='fas fa-arrow-right'></i>} </div>}
                 </div>
                 {finPartie && <div className='gagnant' style={{ fontSize: '25px' }}>Gagnant {gagnantPartie}</div>}
                 <div className='parametreJeu' style={{ display: parametre }}>
