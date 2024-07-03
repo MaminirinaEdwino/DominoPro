@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { BoiteDiscussion } from "./boiteDiscussion"
-import './assets/dist/message.css'
+import './assets/message.css'
 export function InterfaceMessagerie({uriUser, idUser, tableUser, nomUser}) {
     const [listeJoueurs, setlistejoueur] = useState([])
 
