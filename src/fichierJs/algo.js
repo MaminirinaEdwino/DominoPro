@@ -28,27 +28,27 @@ let Dominos = [
     { v1: "5", v2: "6", cle: "26" },
     { v1: "6", v2: "6", cle: "27" }
 ]
-let mainJoueur = [
-    { v1: '3', v2: '4', cle: '19' },
-    { v1: '5', v2: '6', cle: '26' },
-    { v1: '4', v2: '5', cle: '23' },
-    { v1: '1', v2: '2', cle: '8' },
-    { v1: '4', v2: '4', cle: '22' },
-    { v1: '2', v2: '4', cle: '15' },
-    { v1: '3', v2: '6', cle: '21' }
-]
-let mainAdversaire = [
-    { v1: '0', v2: '5', cle: '5' },
-    { v1: '0', v2: '0', cle: '0' },
-    { v1: '0', v2: '2', cle: '2' },
-    { v1: '4', v2: '6', cle: '24' },
-    { v1: '0', v2: '1', cle: '1' },
-    { v1: '1', v2: '1', cle: '7' },
-    { v1: "6", v2: "6", cle: "27" }
-]
-let dominoPlace = [
-    { v1: "0", v2: "2", cle: "2" },{ v1: "2", v2: "6", cle: "17" }
-]
+// let mainJoueur = [
+//     { v1: '3', v2: '4', cle: '19' },
+//     { v1: '5', v2: '6', cle: '26' },
+//     { v1: '4', v2: '5', cle: '23' },
+//     { v1: '1', v2: '2', cle: '8' },
+//     { v1: '4', v2: '4', cle: '22' },
+//     { v1: '2', v2: '4', cle: '15' },
+//     { v1: '3', v2: '6', cle: '21' }
+// ]
+// let mainAdversaire = [
+//     { v1: '0', v2: '5', cle: '5' },
+//     { v1: '0', v2: '0', cle: '0' },
+//     { v1: '0', v2: '2', cle: '2' },
+//     { v1: '4', v2: '6', cle: '24' },
+//     { v1: '0', v2: '1', cle: '1' },
+//     { v1: '1', v2: '1', cle: '7' },
+//     { v1: "6", v2: "6", cle: "27" }
+// ]
+// let dominoPlace = [
+//     { v1: "0", v2: "2", cle: "2" },{ v1: "2", v2: "6", cle: "17" }
+// ]
 //console.log("main joueur 1 ", mainJoueur)
 
 
@@ -59,81 +59,81 @@ let dominoPlace = [
  * raha ohatra ka manana 0 izy de hisaina daoly ny 0 
  * de verifiena otranzay daoly jusqu'à 6
  */
-const verificationDesDominoEnMain = (mainIA) => {
-    let nbrdomino = {
-        "n0": 0, "n1": 0, "n2": 0, "n3": 0, "n4": 0, "n5": 0, "n6": 0
-    }
-    for (let index = 0; index < mainIA.length; index++) {
-        if (mainIA[index].v1 == 0 && mainIA[index].v1 != mainIA[index].v2) {
-            nbrdomino.n0 += 1;
-        }
-        if (mainIA[index].v1 == 1 && mainIA[index].v1 != mainIA[index].v2) {
-            nbrdomino.n1 += 1;
-        }
-        if (mainIA[index].v1 == 2 && mainIA[index].v1 != mainIA[index].v2) {
-            nbrdomino.n2 += 1;
-        }
-        if (mainIA[index].v1 == 3 && mainIA[index].v1 != mainIA[index].v2) {
-            nbrdomino.n3 += 1;
-        }
-        if (mainIA[index].v1 == 4 && mainIA[index].v1 != mainIA[index].v2) {
-            nbrdomino.n4 += 1;
-        }
-        if (mainIA[index].v1 == 5 && mainIA[index].v1 != mainIA[index].v2) {
-            nbrdomino.n5 += 1;
-        }
-        if (mainIA[index].v1 == 6 && mainIA[index].v1 != mainIA[index].v2) {
-            nbrdomino.n6 += 1;
-        }
-    }
-    for (let index = 0; index < mainIA.length; index++) {
-        if (mainIA[index].v2 == 0 && mainIA[index].v1 != mainIA[index].v2) {
-            nbrdomino.n0 += 1;
-        }
-        if (mainIA[index].v2 == 1 && mainIA[index].v1 != mainIA[index].v2) {
-            nbrdomino.n1 += 1;
-        }
-        if (mainIA[index].v2 == 2 && mainIA[index].v1 != mainIA[index].v2) {
-            nbrdomino.n2 += 1;
-        }
-        if (mainIA[index].v2 == 3 && mainIA[index].v1 != mainIA[index].v2) {
-            nbrdomino.n3 += 1;
-        }
-        if (mainIA[index].v2 == 4 && mainIA[index].v1 != mainIA[index].v2) {
-            nbrdomino.n4 += 1;
-        }
-        if (mainIA[index].v2 == 5 && mainIA[index].v1 != mainIA[index].v2) {
-            nbrdomino.n5 += 1;
-        }
-        if (mainIA[index].v2 == 6 && mainIA[index].v1 != mainIA[index].v2) {
-            nbrdomino.n6 += 1;
-        }
-    }
-    for (let index = 0; index < mainIA.length; index++) {
-        if (mainIA[index].v2 == 0 && mainIA[index].v1 == mainIA[index].v2) {
-            nbrdomino.n0 += 1;
-        }
-        if (mainIA[index].v2 == 1 && mainIA[index].v1 == mainIA[index].v2) {
-            nbrdomino.n1 += 1;
-        }
-        if (mainIA[index].v2 == 2 && mainIA[index].v1 == mainIA[index].v2) {
-            nbrdomino.n2 += 1;
-        }
-        if (mainIA[index].v2 == 3 && mainIA[index].v1 == mainIA[index].v2) {
-            nbrdomino.n3 += 1;
-        }
-        if (mainIA[index].v2 == 4 && mainIA[index].v1 == mainIA[index].v2) {
-            nbrdomino.n4 += 1;
-        }
-        if (mainIA[index].v2 == 5 && mainIA[index].v1 == mainIA[index].v2) {
-            nbrdomino.n5 += 1;
-        }
-        if (mainIA[index].v2 == 6 && mainIA[index].v1 == mainIA[index].v2) {
-            nbrdomino.n6 += 1;
-        }
-    }
-    return nbrdomino
-}
+// const verificationDesDominoEnMain = (mainIA) => {
+//     let nbrdomino = {
+//         "n0": 0, "n1": 0, "n2": 0, "n3": 0, "n4": 0, "n5": 0, "n6": 0
+//     }
+//     for (let index = 0; index < mainIA.length; index++) {
+//         if (mainIA[index].v1 == 0 && mainIA[index].v1 != mainIA[index].v2) {
+//             nbrdomino.n0 += 1;
+//         }
+//         if (mainIA[index].v1 == 1 && mainIA[index].v1 != mainIA[index].v2) {
+//             nbrdomino.n1 += 1;
+//         }
+//         if (mainIA[index].v1 == 2 && mainIA[index].v1 != mainIA[index].v2) {
+//             nbrdomino.n2 += 1;
+//         }
+//         if (mainIA[index].v1 == 3 && mainIA[index].v1 != mainIA[index].v2) {
+//             nbrdomino.n3 += 1;
+//         }
+//         if (mainIA[index].v1 == 4 && mainIA[index].v1 != mainIA[index].v2) {
+//             nbrdomino.n4 += 1;
+//         }
+//         if (mainIA[index].v1 == 5 && mainIA[index].v1 != mainIA[index].v2) {
+//             nbrdomino.n5 += 1;
+//         }
+//         if (mainIA[index].v1 == 6 && mainIA[index].v1 != mainIA[index].v2) {
+//             nbrdomino.n6 += 1;
+//         }
+//     }
+//     for (let index = 0; index < mainIA.length; index++) {
+//         if (mainIA[index].v2 == 0 && mainIA[index].v1 != mainIA[index].v2) {
+//             nbrdomino.n0 += 1;
+//         }
+//         if (mainIA[index].v2 == 1 && mainIA[index].v1 != mainIA[index].v2) {
+//             nbrdomino.n1 += 1;
+//         }
+//         if (mainIA[index].v2 == 2 && mainIA[index].v1 != mainIA[index].v2) {
+//             nbrdomino.n2 += 1;
+//         }
+//         if (mainIA[index].v2 == 3 && mainIA[index].v1 != mainIA[index].v2) {
+//             nbrdomino.n3 += 1;
+//         }
+//         if (mainIA[index].v2 == 4 && mainIA[index].v1 != mainIA[index].v2) {
+//             nbrdomino.n4 += 1;
+//         }
+//         if (mainIA[index].v2 == 5 && mainIA[index].v1 != mainIA[index].v2) {
+//             nbrdomino.n5 += 1;
+//         }
+//         if (mainIA[index].v2 == 6 && mainIA[index].v1 != mainIA[index].v2) {
+//             nbrdomino.n6 += 1;
+//         }
+//     }
+//     for (let index = 0; index < mainIA.length; index++) {
+//         if (mainIA[index].v2 == 0 && mainIA[index].v1 == mainIA[index].v2) {
+//             nbrdomino.n0 += 1;
+//         }
+//         if (mainIA[index].v2 == 1 && mainIA[index].v1 == mainIA[index].v2) {
+//             nbrdomino.n1 += 1;
+//         }
+//         if (mainIA[index].v2 == 2 && mainIA[index].v1 == mainIA[index].v2) {
+//             nbrdomino.n2 += 1;
+//         }
+//         if (mainIA[index].v2 == 3 && mainIA[index].v1 == mainIA[index].v2) {
+//             nbrdomino.n3 += 1;
+//         }
+//         if (mainIA[index].v2 == 4 && mainIA[index].v1 == mainIA[index].v2) {
+//             nbrdomino.n4 += 1;
+//         }
+//         if (mainIA[index].v2 == 5 && mainIA[index].v1 == mainIA[index].v2) {
+//             nbrdomino.n5 += 1;
+//         }
+//         if (mainIA[index].v2 == 6 && mainIA[index].v1 == mainIA[index].v2) {
+//             nbrdomino.n6 += 1;
+//         }
+//     }
+//     return nbrdomino
+// }
 /**
  * fonction manao recherche ny domino restant any am joueur hafa na ny domino tsy miasa par rapport @ domino efa placé sy ny eny @ tanany
  * @param {*} dominoplacee 
@@ -176,21 +176,21 @@ const verificationDominoRestant = (dominoplacee, dominoTotal, mainIA) => {
  * ito fonction manao recherche an'ilay nombre an'ilay valeur domino restant @ table sy joueur a partir an'ilay nombre de domino an'ilay IA automatique tetsy ambony
  * @param {Array} nbrDomIA 
  */
-const verificationDesNombreDeDominoRestant = (nbrDomIA) => {
-    //console.log(' \nverification des nombre de domino restant \n ')
-    let nombreDominoDepart = {
-        "n0": 7, "n1": 7, "n2": 7, "n3": 7, "n4": 7, "n5": 7, "n6": 7
-    }
-    return {
-        "n0": nombreDominoDepart.n0 - nbrDomIA.n0,
-        "n1": nombreDominoDepart.n1 - nbrDomIA.n1,
-        "n2": nombreDominoDepart.n2 - nbrDomIA.n2,
-        "n3": nombreDominoDepart.n3 - nbrDomIA.n3,
-        "n4": nombreDominoDepart.n4 - nbrDomIA.n4,
-        "n5": nombreDominoDepart.n5 - nbrDomIA.n5,
-        "n6": nombreDominoDepart.n6 - nbrDomIA.n6
-    }
-}
+// const verificationDesNombreDeDominoRestant = (nbrDomIA) => {
+//     //console.log(' \nverification des nombre de domino restant \n ')
+//     let nombreDominoDepart = {
+//         "n0": 7, "n1": 7, "n2": 7, "n3": 7, "n4": 7, "n5": 7, "n6": 7
+//     }
+//     return {
+//         "n0": nombreDominoDepart.n0 - nbrDomIA.n0,
+//         "n1": nombreDominoDepart.n1 - nbrDomIA.n1,
+//         "n2": nombreDominoDepart.n2 - nbrDomIA.n2,
+//         "n3": nombreDominoDepart.n3 - nbrDomIA.n3,
+//         "n4": nombreDominoDepart.n4 - nbrDomIA.n4,
+//         "n5": nombreDominoDepart.n5 - nbrDomIA.n5,
+//         "n6": nombreDominoDepart.n6 - nbrDomIA.n6
+//     }
+// }
 /**
  * fonction midetermine ny domino hoe afaka apetraka mba ahafahana manangana ny chaine possible rehetra 
  * @param {*} mainIA 
@@ -213,27 +213,27 @@ const determinerDominoPossible = (domino, debut, fin) => {
     }
 }
 
-const determinerParSomme = (dominoPossible) => {
-    let choix = dominoPossible[0]
-    const somme = (domino) => {
-        return domino.v1 + domino.v2
-    }
-    for (let index = 0; index < dominoPossible.length; index++) {
-        if (somme(choix) < somme(dominoPossible[index])) {
-            choix = dominoPossible[index]
-        }
-    }
-    return choix
-}
-const determinerChoixAPartirPossibilite = (possibilite, main) => {
-    let domino = []
-    for (let index = 0; index < main.length; index++) {
-        if (main[index].v1 == possibilite.valeur || main[index].v2 == possibilite.valeur) {
-            domino.push(main[index])
-        }
-    }
-    return determinerParSomme(domino)
-}
+// const determinerParSomme = (dominoPossible) => {
+//     let choix = dominoPossible[0]
+//     const somme = (domino) => {
+//         return domino.v1 + domino.v2
+//     }
+//     for (let index = 0; index < dominoPossible.length; index++) {
+//         if (somme(choix) < somme(dominoPossible[index])) {
+//             choix = dominoPossible[index]
+//         }
+//     }
+//     return choix
+// }
+// const determinerChoixAPartirPossibilite = (possibilite, main) => {
+//     let domino = []
+//     for (let index = 0; index < main.length; index++) {
+//         if (main[index].v1 == possibilite.valeur || main[index].v2 == possibilite.valeur) {
+//             domino.push(main[index])
+//         }
+//     }
+//     return determinerParSomme(domino)
+// }
 /**
  * fonction mi-retirer domino avy ao @ main
  * @param {*} main 

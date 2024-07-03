@@ -7,6 +7,7 @@ import { Formulaire } from "./OnlineGame/Formulaire.jsx"
 import { PageTransitions } from "./OnlineGame/pageTransition.jsx"
 import { Multi_Joueur } from "./OnlineGame/Multi_joueur.jsx"
 import { Apropos } from "./AboutJeu/apropos.jsx"
+import Manuel from "./manuel/manuel.jsx"
 const routeur = createBrowserRouter([
   {
     path: '/',
@@ -31,6 +32,10 @@ const routeur = createBrowserRouter([
   {
     path: '/about',
     element: <Apropos />
+  },
+  {
+    path: '/manuel',
+    element: <Manuel />
   }
 ])
 function App() {

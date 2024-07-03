@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
 import { Footer } from "../footer"
 import './assets/about.css'
+import BoutonRetour from "../boutonRetour/boutonRetour"
 
 export function Apropos() {
     const information = [
@@ -46,6 +47,7 @@ export function Apropos() {
             {//etape > 0 && <button className="precedent" onClick={handleMoins}>précedent</button>
             }
             {etape < information.length - 1 && <button className="suivant" onClick={handlePlus}>{etape == 0 ? 'Afficher information' : 'suivant'} </button>}
+            <BoutonRetour/>
         </div>
         
         <Footer />

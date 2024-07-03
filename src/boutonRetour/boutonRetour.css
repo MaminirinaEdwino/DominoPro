@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind utilities;
+@tailwind components;
+
+.btnRetour{
+    @apply p-2 block pl-4 pr-4 bg-blue-500 w-fit rounded-full m-1 fixed text-white hover:bg-blue-400 transition-all duration-200 top-0 left-0
+}

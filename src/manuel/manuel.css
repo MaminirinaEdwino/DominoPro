@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.titleManuel {
+    @apply w-fit m-auto text-4xl p-5 mb-10
+}
+
+section {
+    @apply m-auto w-7/12 mb-10
+}
+article{
+    @apply border flex flex-col rounded-lg overflow-hidden shadow-lg drop-shadow-lg mb-5
+}
+article p{
+    @apply pl-2 flex flex-col h-10 justify-center bg-blue-500 text-white
+}
+article img {
+    @apply w-auto block static border-t
+}
+article li{
+    @apply p-2 first-letter:pl-5
+}
