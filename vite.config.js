@@ -40,5 +40,5 @@ export default defineConfig({
 	server: {
 		host: true
 	},
-	base: "/DominoPro/"
+	base: "/"
 })
